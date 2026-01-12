@@ -76,6 +76,7 @@
     picom
     chromium
     obs-studio
+    vlc
     rofi
     feh
     pcmanfm
