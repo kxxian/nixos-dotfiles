@@ -15,3 +15,11 @@ then clone your configs in that directory <br>
 ```bash
 ln -sf ~/nixos-dotfiles/config/
 ```
+
+Note: don't forget to change the UUID's in hardware configuration before rebuilding it, if you're reinstalling it into a new machine. <br>
+
+to check check the UUID's simply type. <br>
+
+```bash
+lsblk -f
+```
