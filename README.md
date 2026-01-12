@@ -8,7 +8,7 @@ create new directory for config files <br>
 mkdir config
 ```
 
-then clone your configs in that directory <br>
+then clone your configs in that directory, then rebuild. <br>
 
 ## Add symlink to the config directory in your home user directory
 
