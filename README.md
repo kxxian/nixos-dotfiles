@@ -23,3 +23,12 @@ to check check the UUID's simply type. <br>
 ```bash
 lsblk -f
 ```
+
+## Wallpapers
+
+create a new directory for wallpapers and copy the imae in walls directory. <br>
+
+```bash
+mkdir ~/.wallpapers
+cp ~/nixos-dotfiles/walls/* ~/.wallpapers
+```
