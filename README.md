@@ -26,7 +26,9 @@ lsblk -f
 
 ## Wallpapers
 
-create a new directory for wallpapers and copy the imae in walls directory. <br>
+create a new directory for wallpapers and copy the image in walls directory. <br>
+
+in your home user directory, to this. <br>
 
 ```bash
 mkdir ~/.wallpapers
