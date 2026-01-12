@@ -110,9 +110,13 @@
   nix.gc = {
     automatic = true;
     dates = "weekly";
+    options = "--delete-older-than 30d";
   };
 
+  nix.settings.auto-optimise-store = true;
   nix.settings.experimental-features = [ "nix-command" "flakes"];
+
+  boot.loader.systemd-boot.configurationLimit = 5;
   system.stateVersion = "25.11"; 
 }
 
