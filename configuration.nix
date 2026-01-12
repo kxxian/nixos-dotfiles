@@ -75,6 +75,7 @@
     alacritty
     picom
     chromium
+    obs-studio
     rofi
     feh
     pcmanfm
