@@ -34,3 +34,11 @@ in your home user directory, to this. <br>
 mkdir ~/.wallpapers
 cp ~/nixos-dotfiles/walls/* ~/.wallpapers
 ```
+
+## Enable auto garbage collector
+
+just simply run this in your terminal. <br>
+
+```bash
+systemctl start nix-gc.service
+```
