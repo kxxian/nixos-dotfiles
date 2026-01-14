@@ -57,6 +57,9 @@
   programs.nix-ld.libraries = with pkgs; [
     rpclib
     stderred
+    openssl_1_1
+    zlib
+    stdenvNoCC
     stylua
   ];
 
@@ -72,7 +75,6 @@
     cmatrix
     gnumake
     flameshot
-    openssl
     alacritty
     picom
     chromium
