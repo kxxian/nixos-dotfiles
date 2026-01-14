@@ -72,6 +72,7 @@
     cmatrix
     gnumake
     flameshot
+    openssl
     alacritty
     picom
     chromium
