@@ -75,6 +75,7 @@
     alacritty
     picom
     chromium
+    brave
     obs-studio
     vlc
     rofi
