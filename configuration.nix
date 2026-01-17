@@ -88,6 +88,7 @@
     arandr
     autorandr
     lxappearance
+    libreoffice
     nodejs_24
   ];
 
