@@ -67,6 +67,7 @@
     wget
     xclip
     btop
+    tlp
     git
     unzip
     cmatrix
@@ -101,6 +102,19 @@
     enable = true;
     enableSSHSupport = true;
   };
+
+  services.tlp = {
+    enable = true;
+    settings = {
+      # TLP_DEFAULT_MODE = "BAT";
+      CPU_SCALING_GOVERNOR_ON_AC = "performance";
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+      START_CHARGE_THRESH_BAT0 = 40;
+      STOP_CHARGE_THRESH_BAT0 = 80;
+    };
+  };   
 
   services.openssh.enable = true;
 
