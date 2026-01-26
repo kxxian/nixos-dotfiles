@@ -106,15 +106,28 @@
   services.tlp = {
     enable = true;
     settings = {
-      # TLP_DEFAULT_MODE = "BAT";
-      # CPU_SCALING_GOVERNOR_ON_AC = "performance";
-      CPU_SCALING_GOVERNOR_ON_AC = "powersave";
+      # CPU Scaling Governors
+      CPU_SCALING_GOVERNOR_ON_AC = "performance";
       CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "powersave";
-      CPU_ENERGY_PERF_POLICY_ON_AC = "powersave";
-      START_CHARGE_THRESH_BAT0 = 40;
-      STOP_CHARGE_THRESH_BAT0 = 80;
-    };
+
+      # Energy Performance Policy
+      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+
+      # CPU Frequency Limits
+      CPU_MIN_PERF_ON_AC = 0;
+      CPU_MAX_PERF_ON_AC = 100;
+      CPU_MIN_PERF_ON_BAT = 0;
+      CPU_MAX_PERF_ON_BAT = 20;
+
+      # Battery Health Protection
+      START_CHARGE_THRESH_BAT0 = 40;  # Start charging at 40%
+      STOP_CHARGE_THRESH_BAT0 = 80;   # Stop charging at 80%
+
+      # Optional: Force TLP to run in battery mode (helpful for certain hardware)
+      TLP_DEFAULT_MODE = "BAT";
+      TLP_PERSISTENT_DEFAULT = 1;
+      };
   };   
 
   services.openssh.enable = true;
