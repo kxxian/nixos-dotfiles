@@ -8,6 +8,7 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.initrd.kernelModules = [ "amdgpu" ];   
 
   networking.hostName = "nixos"; 
 
@@ -16,6 +17,11 @@
   time.timeZone = "Asia/Manila";
 
   services.displayManager.ly.enable = true;
+
+  services.xserver.videoDrivers = [ "amdgpu" ];   
+  hardware.graphics = {
+    enable = true;
+  };   
 
   services.xserver = {
     enable = true;
