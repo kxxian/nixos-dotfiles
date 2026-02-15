@@ -110,27 +110,29 @@
     enableSSHSupport = true;
   };
 
-  services.tlp = {
-    enable = true;
-    settings = {
+  services.auto-cpufreq.enable = true;
 
-      # AMD works best with schedutil
-      CPU_SCALING_GOVERNOR_ON_AC = "schedutil";
-      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-
-      # Limit boost aggression
-      CPU_MAX_PERF_ON_AC = 75;
-      CPU_MAX_PERF_ON_BAT = 35;
-
-      # Optional but recommended for heat
-      CPU_BOOST_ON_AC = 0;
-      CPU_BOOST_ON_BAT = 0;
-
-      # Battery health
-      START_CHARGE_THRESH_BAT0 = 40;
-      STOP_CHARGE_THRESH_BAT0 = 80;
-    };
-  };
+  # services.tlp = {
+  #   enable = true;
+  #   settings = {
+  #
+  #     # AMD works best with schedutil
+  #     CPU_SCALING_GOVERNOR_ON_AC = "schedutil";
+  #     CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+  #
+  #     # Limit boost aggression
+  #     CPU_MAX_PERF_ON_AC = 75;
+  #     CPU_MAX_PERF_ON_BAT = 35;
+  #
+  #     # Optional but recommended for heat
+  #     CPU_BOOST_ON_AC = 0;
+  #     CPU_BOOST_ON_BAT = 0;
+  #
+  #     # Battery health
+  #     START_CHARGE_THRESH_BAT0 = 40;
+  #     STOP_CHARGE_THRESH_BAT0 = 80;
+  #   };
+  # };
 
   services.openssh.enable = true;
 
