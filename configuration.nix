@@ -90,6 +90,7 @@
     alacritty
     picom
     chromium
+    dmidecode
     brave
     obs-studio
     vlc
