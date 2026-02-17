@@ -10,6 +10,14 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.kernelModules = [ "amdgpu" ];   
 
+  services.thermald.enable = true;
+
+  boot.kernelParams = [
+    "amdgpu.dpm=1"
+    "amdgpu.runpm=1"
+    "idle=nomwait"
+  ];
+
   networking.hostName = "nixos"; 
 
   networking.networkmanager.enable = true;
@@ -17,6 +25,7 @@
   time.timeZone = "Asia/Manila";
 
   services.displayManager.ly.enable = true;
+
 
   services.xserver.videoDrivers = [ "amdgpu" ];   
   hardware.graphics = {
@@ -73,7 +82,6 @@
     wget
     xclip
     btop
-    tlp
     git
     unzip
     cmatrix
@@ -116,19 +124,18 @@
     enable = true;
     settings = {
 
-      # AMD works best with schedutil
       CPU_SCALING_GOVERNOR_ON_AC = "schedutil";
       CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
 
-      # Limit boost aggression
-      CPU_MAX_PERF_ON_AC = 75;
-      CPU_MAX_PERF_ON_BAT = 35;
+      CPU_ENERGY_PERF_POLICY_ON_AC = "balance_performance";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
 
-      # Optional but recommended for heat
-      CPU_BOOST_ON_AC = 0;
+      CPU_BOOST_ON_AC = 1;
       CPU_BOOST_ON_BAT = 0;
 
-      # Battery health
+      CPU_MAX_PERF_ON_AC = 100;
+      CPU_MAX_PERF_ON_BAT = 40;
+
       START_CHARGE_THRESH_BAT0 = 40;
       STOP_CHARGE_THRESH_BAT0 = 80;
     };
