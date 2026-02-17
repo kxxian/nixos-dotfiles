@@ -93,6 +93,7 @@
     brave
     obs-studio
     vlc
+    yt-dlp
     rofi
     feh
     pcmanfm
