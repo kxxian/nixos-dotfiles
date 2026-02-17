@@ -9,20 +9,20 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # boot.initrd.kernelModules = [ "amdgpu" ];   
+  boot.initrd.kernelModules = [ "amdgpu" ];   
 
-  # services.thermald.enable = true;
+  services.thermald.enable = true;
 
-  # boot.kernelParams = [
-  #   "amdgpu.dpm=1"
-  #   "amdgpu.runpm=1"
-  #   "idle=nomwait"
-  # ];
+  boot.kernelParams = [
+    "amdgpu.dpm=1"
+    "amdgpu.runpm=1"
+    "idle=nomwait"
+  ];
 
-  # services.xserver.videoDrivers = [ "amdgpu" ];   
-  # hardware.graphics = {
-  #   enable = true;
-  # };   
+  services.xserver.videoDrivers = [ "amdgpu" ];   
+  hardware.graphics = {
+    enable = true;
+  };   
 
   networking.hostName = "nixos"; 
 
