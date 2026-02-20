@@ -93,6 +93,7 @@
     chromium
     dmidecode
     brave
+    postman
     obs-studio
     vlc
     yt-dlp
