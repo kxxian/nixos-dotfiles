@@ -104,7 +104,7 @@
     pfetch
     gvfs
     telegram-desktop
-    pgadmin4-desktopmode
+    pgmanage
     brightnessctl
     pavucontrol
     arandr
