@@ -103,7 +103,6 @@
     pcmanfm
     pfetch
     gvfs
-    telegram-desktop
     brightnessctl
     pavucontrol
     arandr
