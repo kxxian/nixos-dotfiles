@@ -123,6 +123,7 @@
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
+    corefonts
   ];
 
   programs.mtr.enable = true;
